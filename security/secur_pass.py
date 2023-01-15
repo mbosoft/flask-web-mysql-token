@@ -3,7 +3,7 @@ from passlib.context import CryptContext
 
 
 # create and vrify pass
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["des_crypt"], deprecated="auto")
 
 
 def get_password_hash(password):

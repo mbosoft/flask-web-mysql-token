@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='/fontawesome/css/all.css')}}" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% include '/partials/_navbar.html' with context %}
+
+
+    <main>
+        <section class="position-relative overflow-hidden pt-5 pt-lg-3">
+            <figure class="position-absolute top-50 start-0 translate-middle-y ms-n7 d-none d-xxl-block">
+                <img class="opacity-25" src="{{ url_for('static', filename = 'img/graph.png') }}" width="280"
+                    height="280" alt="previous" title="Previous" border="0">
+            </figure>
+
+            <figure class="position-absolute top-50 end-0 translate-middle-y mt-5 me-n5 d-none d-xxl-inline-flex">
+                <img class="opacity-25" src="{{ url_for('static', filename = 'img/graph.png') }}" width="280"
+                    height="280" alt="previous" title="Previous" border="0">
+            </figure>
+            {% block content %}
+
+            {% endblock %}
+        </section>
+    </main>
+
+
+
+    {% include '/partials/_footer.html' with context %}
+
+
+</body>
+
+</html>
